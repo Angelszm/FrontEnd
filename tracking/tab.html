@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		body {font-family: Arial;}
+
+		/* Style the tab */
+		.tab {
+		    overflow: hidden;
+		    border: 1px solid #ccc;
+		    background-color: #f1f1f1;
+		}
+
+		/* Style the buttons inside the tab */
+		.tab button {
+		    background-color: inherit;
+		    float: left;
+		    border: none;
+		    outline: none;
+		    cursor: pointer;
+		    padding: 14px 16px;
+		    transition: 0.3s;
+		    font-size: 17px;
+		}
+
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+		    background-color: #ddd;
+		}
+
+		/* Create an active/current tablink class */
+		.tab button.active {
+		    background-color: #ccc;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+		    display: none;
+		    padding: 6px 12px;
+		    border: 1px solid #ccc;
+		    border-top: none;
+		}
+	</style>
+</head>
+	<body>
+
+		<p>Click on the buttons inside the tabbed menu:</p>
+
+		<div class="tab" style="width:750px;">
+		  <button class="tablinks" onclick="setting(event, 'Object')">Object</button>
+		  <button class="tablinks" onclick="setting(event, 'Group')">Group</button>
+		  <button class="tablinks" onclick="setting(event, 'User_Interface')">User Interface</button>
+		  <button class="tablinks" onclick="setting(event, 'My_account')">My account</button>
+		  <button class="tablinks" onclick="setting(event, 'sub_user')">Sub Users</button>
+		</div>
+
+		<div id="Object" class="tabcontent" style="width:726px; height:250px;">
+		  <h3>qqq</h3>
+		  <p>dfdasfda</p>
+		</div>
+
+		<div id="Group" class="tabcontent" style="width:726px; height:250px;">
+		  <h3>dsfds</h3>
+		  <p>ewrewr</p> 
+		</div>
+
+		<div id="User_Interface" class="tabcontent" style="width:726px; height:250px;">
+
+		<table frame="box" width="720" height="210" align="center">
+		<tr><td align="center">
+			<table  border="0">
+				<tr><td align="right">Objects:</td>
+					<td align="left">
+						<select style="width: 152px;">
+							<option></option>
+						</select>
+					</td>
+				</tr>
+
+				<tr><td align="right">Trail color:</td>
+					<td align="left">
+						<select style="width: 152px;">
+							<option></option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</td></tr>
+
+
+		</table>
+		
+	
+
+		<p align="right"><input type="submit" value="Save">
+		<input type="submit" value="Cancel"></p>
+	
+		</div>
+
+		<div id="My_account" class="tabcontent" style="width: 740px;height: 250px;display: block;padding-left: 5px;padding-right: 5px;">
+		<table frame="box" style="width:740px; height:225px;">
+			<tbody><tr>
+				<td>	
+					<table>
+						<tbody><tr>
+							<td align="right">Name:</td>
+							<td align="left"><input type="text" placeholder="XXX"></td>
+						</tr>
+						<tr>
+							<td align="right">Email:</td>
+							<td align="left"><input type="text" placeholder="XXX@gmail.iii"></td>
+						</tr>
+						<tr>
+							<td align="right">Phone Number:</td>
+							<td align="left"><input type="text"></td>
+						</tr>
+						<tr>
+							<td align="right">Company:</td>
+							<td align="left"><input type="text"></td>
+						</tr>
+					</tbody></table>
+				</td>
+				<td align="right">
+					<table>
+						<tbody><tr>
+							<td align="right">Address:</td>
+							<td align="left"><input type="text" height="" style="height: 60px;"></td>
+						</tr>
+						<tr>
+							<td align="right">ID:</td>
+							<td align="left"><input type="text"></td>
+						</tr>
+					</tbody></table>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">To Change Password</td>
+				<td>
+					<table frame="box" align="right" width="350px">
+						<tbody><tr>
+							<td align="right">Old Password:</td>
+							<td align="left"><input type="text"></td>
+						</tr>
+						<tr>
+							<td align="right">New Password:</td>
+							<td align="left"><input type="text"></td>
+						</tr>
+						<tr>
+							<td align="right">Repeat New Password:</td>
+							<td align="left"><input type="text"></td>
+						</tr>
+					</tbody></table>
+				</td>
+			</tr>
+		</tbody></table>
+		
+		
+		
+			
+			<p align="right" style="
+   			margin-top: 8px;
+			margin-bottom: 8px;
+			"><input type="submit" value="Save">
+			<input type="submit" value="Cancel"></p>
+			
+			
+		
+		</div>
+
+		<div id="sub_user" class="tabcontent" style="width:726px; height:250px;">
+		  <h3>errrrrr</h3>
+		  <p>dhttttttttttt</p>
+		</div>
+
+		<script>
+		function setting(evt, cityName) {
+		    var i, tabcontent, tablinks;
+		    tabcontent = document.getElementsByClassName("tabcontent");
+		    for (i = 0; i < tabcontent.length; i++) {
+		        tabcontent[i].style.display = "none";
+		    }
+		    tablinks = document.getElementsByClassName("tablinks");
+		    for (i = 0; i < tablinks.length; i++) {
+		        tablinks[i].className = tablinks[i].className.replace(" active", "");
+		    }
+		    document.getElementById(cityName).style.display = "block";
+		    evt.currentTarget.className += " active";
+		}
+		</script>
+     
+</body>
+</html> 
